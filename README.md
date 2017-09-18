@@ -23,12 +23,13 @@ Slides: [put link to slides here]
 4. `cd tensorflow-demo`
 5. `virtualenv --system-site-packages .` **(DON'T FORGET THE ".")**
 6. `pip3 install --upgrade tensorflow`
-7. `source ./bin/activate`
+7. `pip3 install --upgrade pandas`
+8. `source ./bin/activate`
 **NOTE: Now your prompt should look something like this:** `(tensorflow)$`
-7. Download Sublime Text 3: https://download.sublimetext.com/Sublime%20Text%20Build%203143%20x64%20Setup.exe
+9. Download Sublime Text 3: http://www.sublimetext.com/3
 **NOTE: You can use another editor (just not Notepad)**
-8. Open `hello.py` with Sublime Text 3 (or another editor)
-9. Type in `python hello.py` to run the Hello World program
+10. Open `hello.py` with Sublime Text 3 (or another editor)
+11. Type in `python hello.py` to run the Hello World program
 
 ## Links/Resources:
 
