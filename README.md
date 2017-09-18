@@ -34,4 +34,7 @@ Slides: [put link to slides here]
 
 - TensorFlow Website:
 https://www.tensorflow.org/
-- Something
+- MNIST Database of Handwritten Digits:
+http://yann.lecun.com/exdb/mnist/
+- Tons of Tensorflow Examples:
+https://github.com/aymericdamien/TensorFlow-Examples
