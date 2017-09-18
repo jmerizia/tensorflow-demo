@@ -1,6 +1,6 @@
-# Installation
+## Setup
 
-## Windows:
+### Windows:
 
 1. Install python3: https://www.python.org/ftp/python/3.5.2/python-3.5.2-amd64.exe
 **NOTE: Make sure to check the box that says ADD PYTHON TO SYSTEM PATH**
@@ -11,8 +11,8 @@
 **NOTE: You can use another editor (just not Notepad)**
 6. Open `main.py` with Sublime Text 3 (or another editor)
 
-## MacOS:
+### MacOS:
 1. `sudo easy_install pip`
 2. `sudo pip install --upgrade virtualenv`
 
-## Linux:
+### Linux:
