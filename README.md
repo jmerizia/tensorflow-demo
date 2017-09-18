@@ -1,3 +1,5 @@
+# Tensorflow Demo
+
 ## Setup
 
 ### Windows:
@@ -11,8 +13,12 @@
 **NOTE: You can use another editor (just not Notepad)**
 6. Open `main.py` with Sublime Text 3 (or another editor)
 
-### MacOS:
+### MacOS: (using virtualenv)
 1. `sudo easy_install pip`
 2. `sudo pip install --upgrade virtualenv`
+3. Clone this repository: `git clone https://github.com/jmerizia/tensorflow-demo`
+4. `cd tensorflow-demo`
+5. `virtualenv --system-site-packages .` **DON'T FORGET THE "."**
+6. `pip3 install --upgrade tensorflow`
 
 ### Linux:
