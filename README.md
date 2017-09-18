@@ -14,7 +14,7 @@
 6. Open `hello.py` with Sublime Text 3 (or another editor)
 7. Type in `python hello.py` to run the Hello World program
 
-### MacOS: (using virtualenv)
+### MacOS or Linux: (using virtualenv)
 1. `sudo easy_install pip`
 2. `sudo pip install --upgrade virtualenv`
 3. Clone this repository: `git clone https://github.com/jmerizia/tensorflow-demo`
@@ -28,4 +28,8 @@
 8. Open `hello.py` with Sublime Text 3 (or another editor)
 9. Type in `python hello.py` to run the Hello World program
 
-### Linux:
+## Links/Resources:
+
+- TensorFlow Website:
+https://www.tensorflow.org/
+- Something
