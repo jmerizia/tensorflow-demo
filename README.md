@@ -1,5 +1,7 @@
 # Tensorflow Demo
 
+Slides: [put link to slides here]
+
 ## Setup
 
 ### Windows:
