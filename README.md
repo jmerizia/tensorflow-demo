@@ -11,7 +11,8 @@
 4. Clone this repository: `git clone https://github.com/jmerizia/tensorflow-demo`
 5. Download Sublime Text 3: https://download.sublimetext.com/Sublime%20Text%20Build%203143%20x64%20Setup.exe
 **NOTE: You can use another editor (just not Notepad)**
-6. Open `main.py` with Sublime Text 3 (or another editor)
+6. Open `hello.py` with Sublime Text 3 (or another editor)
+7. Type in `python hello.py` to run the Hello World program
 
 ### MacOS: (using virtualenv)
 1. `sudo easy_install pip`
@@ -24,6 +25,7 @@
 **NOTE: Now your prompt should look something like this:** `(tensorflow)$`
 7. Download Sublime Text 3: https://download.sublimetext.com/Sublime%20Text%20Build%203143%20x64%20Setup.exe
 **NOTE: You can use another editor (just not Notepad)**
-8. Open `main.py` with Sublime Text 3 (or another editor)
+8. Open `hello.py` with Sublime Text 3 (or another editor)
+9. Type in `python hello.py` to run the Hello World program
 
 ### Linux:
