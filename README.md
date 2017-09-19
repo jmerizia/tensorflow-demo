@@ -22,24 +22,27 @@ Slides: [put link to slides here]
 
 ### MacOS or Linux: (using virtualenv)
 1. `sudo easy_install pip`
-2. `sudo pip install --upgrade virtualenv`
+2. `sudo easy_install virtualenv`
 3. Clone this repository: `git clone https://github.com/jmerizia/tensorflow-demo`
 4. `cd tensorflow-demo`
 5. `virtualenv --system-site-packages .` **(DON'T FORGET THE ".")**
 6. `source ./bin/activate`
+**NOTE: Now your prompt should look something like this:** `(tensorflow-demo)$`
 7. Install necessary libraries: **If it doesn't work, try with** `sudo`
 - `pip3 install --upgrade tensorflow`
 - `pip3 install --upgrade flask`
 - `pip3 install --upgrade matplotlib`
 - `pip3 install --upgrade scikit-image`
-**NOTE: Now your prompt should look something like this:** `(tensorflow)$`
 8. Download Sublime Text 3: http://www.sublimetext.com/3
 **NOTE: You can use another editor (just not Notepad)**
 9. Open `hello.py` with Sublime Text 3 (or another editor)
 10. Type in `python hello.py` to run the Hello World program
+**After the workshop, type in** `deactivate` **to deactivate virtualenv**
 
 ## Links/Resources:
 
+- More on installing pip on linux:
+https://www.tecmint.com/install-pip-in-linux/
 - TensorFlow Website:
 https://www.tensorflow.org/
 - MNIST Database of Handwritten Digits:
