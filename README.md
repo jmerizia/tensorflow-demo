@@ -11,10 +11,14 @@ Slides: [put link to slides here]
 2. Open command prompt
 3. Type `pip3 install --upgrade tensorflow`
 4. Clone this repository: `git clone https://github.com/jmerizia/tensorflow-demo`
-5. Download Sublime Text 3: https://download.sublimetext.com/Sublime%20Text%20Build%203143%20x64%20Setup.exe
+5. `cd tensorflow-demo`
+6. Install necessary libraries:
+- 1
+- 2
+7. Download Sublime Text 3: https://download.sublimetext.com/Sublime%20Text%20Build%203143%20x64%20Setup.exe
 **NOTE: You can use another editor (just not Notepad)**
-6. Open `hello.py` with Sublime Text 3 (or another editor)
-7. Type in `python hello.py` to run the Hello World program
+8. Open `hello.py` with Sublime Text 3 (or another editor)
+9. Type in `python hello.py` to run the Hello World program
 
 ### MacOS or Linux: (using virtualenv)
 1. `sudo easy_install pip`
@@ -22,14 +26,17 @@ Slides: [put link to slides here]
 3. Clone this repository: `git clone https://github.com/jmerizia/tensorflow-demo`
 4. `cd tensorflow-demo`
 5. `virtualenv --system-site-packages .` **(DON'T FORGET THE ".")**
-6. `pip3 install --upgrade tensorflow`
-7. `pip3 install --upgrade pandas`
-8. `source ./bin/activate`
+6. `source ./bin/activate`
+7. Install necessary libraries: **If it doesn't work, try with** `sudo`
+- `pip3 install --upgrade tensorflow`
+- `pip3 install --upgrade flask`
+- `pip3 install --upgrade matplotlib`
+- `pip3 install --upgrade scikit-image`
 **NOTE: Now your prompt should look something like this:** `(tensorflow)$`
-9. Download Sublime Text 3: http://www.sublimetext.com/3
+8. Download Sublime Text 3: http://www.sublimetext.com/3
 **NOTE: You can use another editor (just not Notepad)**
-10. Open `hello.py` with Sublime Text 3 (or another editor)
-11. Type in `python hello.py` to run the Hello World program
+9. Open `hello.py` with Sublime Text 3 (or another editor)
+10. Type in `python hello.py` to run the Hello World program
 
 ## Links/Resources:
 

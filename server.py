@@ -1,6 +1,6 @@
 import tensorflow as tf
 from flask import Flask, send_file, jsonify, request
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 from skimage import io, transform
 from PIL import ImageEnhance, Image
 import numpy as np
@@ -41,8 +41,8 @@ def get_data():
 
         # Goal: write the forward propagation algorithm
 
-        plt.imshow(image)
-        plt.show()
+        #plt.imshow(image)
+        #plt.show()
 
         ##################### /\
         ## Your Code ABOVE ## ||
