@@ -33,10 +33,11 @@ Slides: [put link to slides here]
 - `pip3 install --upgrade flask`
 - `pip3 install --upgrade matplotlib`
 - `pip3 install --upgrade scikit-image`
+- `pip3 install --upgrade pandas`
 8. Download Sublime Text 3: http://www.sublimetext.com/3
 **NOTE: You can use another editor (just not Notepad)**
 9. Open `hello.py` with Sublime Text 3 (or another editor)
-10. Type in `python hello.py` to run the Hello World program
+10. Type in `python3 hello.py` to run the Hello World program
 **After the workshop, type in** `deactivate` **to deactivate virtualenv**
 
 ## Links/Resources:
