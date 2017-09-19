@@ -1,5 +1,54 @@
 <html>
   <head>
-    <title>Hello!</title>
+    <title>Tensorflow is lit!</title>
   </head>
+    <body>
+      <div class=container>
+        <video id="video" width="160" height="120" autoplay></video>
+        <button id="snap">Snap Photo</button>
+        <canvas id="canvas" width="160" height="120"></canvas>
+        <button id="estimate">Estimate</button>
+      </div>
+    </body>
+<script>
+var video = document.getElementById('video');
+
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+
+  navigator.mediaDevices.getUserMedia({video: true}).then(function (stream) {
+    video.src = window.URL.createObjectURL(stream);
+    video.play();
+  });
+
+  var canvas = document.getElementById('canvas');
+  var context = canvas.getContext('2d');
+  var video = document.getElementById('video');
+
+  // Trigger photo take
+  document.getElementById("snap").addEventListener("click", function() {
+    context.drawImage(video, 0, 0, 160, 120);
+  });
+
+  document.getElementById("estimate").addEventListener("click", function () {
+    var canvas = document.getElementById("canvas");
+    var imgData = canvas.toDataURL();
+    imgData = imgData.replace(/\+/g, "@");
+    console.log(imgData);
+    console.log(imgData.length)
+    // console.log(imgData.slice(imgData.length - 10, imgData.length));
+    var params = "img_data=" + imgData.slice(imgData.indexOf(",") + 1, imgData.length);
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "/estimate", true);
+    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    xhr.addEventListener("load", function (e) {
+      console.log(e.target.response);
+      console.log(e.target.response.length);
+    });
+    xhr.send(params);
+  });
+
+} else {
+  alert('Your browser does not support web camera! Sorry!')
+}
+</script>
 </html>
