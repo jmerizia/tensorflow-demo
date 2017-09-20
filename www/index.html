@@ -4,10 +4,11 @@
   </head>
     <body>
       <div class=container>
-        <video id="video" width="160" height="120" autoplay></video>
+        <video id="video" width="160" height="120" style="border: solid thin black" autoplay></video>
         <button id="snap">Snap Photo</button>
-        <canvas id="canvas" width="160" height="120"></canvas>
+        <canvas id="canvas" width="160" height="120" style="bordeR: solid thin black"></canvas>
         <button id="estimate">Estimate</button>
+        <div id='output'></div>
       </div>
     </body>
 <script>
@@ -33,16 +34,16 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
     var canvas = document.getElementById("canvas");
     var imgData = canvas.toDataURL();
     imgData = imgData.replace(/\+/g, "@");
-    console.log(imgData);
-    console.log(imgData.length)
-    // console.log(imgData.slice(imgData.length - 10, imgData.length));
     var params = "img_data=" + imgData.slice(imgData.indexOf(",") + 1, imgData.length);
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "/estimate", true);
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhr.addEventListener("load", function (e) {
-      console.log(e.target.response);
-      console.log(e.target.response.length);
+      var guess = JSON.parse(e.target.response).guess;
+      document.getElementById('output').innerHTML = guess;
+    });
+    xhr.addEventListener("error", function (e) {
+      alert("Check your server!");
     });
     xhr.send(params);
   });
@@ -51,4 +52,11 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
   alert('Your browser does not support web camera! Sorry!')
 }
 </script>
+
+<style>
+#output {
+  font-size: 40px;
+  font-weight: bold;
+}
+<style>
 </html>

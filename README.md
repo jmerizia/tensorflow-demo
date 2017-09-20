@@ -21,6 +21,8 @@ Slides: [put link to slides here]
 9. Type in `python hello.py` to run the Hello World program
 
 ### MacOS or Linux: (using virtualenv)
+1. If you don't have python3, go to: https://www.python.org/downloads/ and download
+**python 3.6**
 1. `sudo easy_install pip`
 2. `sudo easy_install virtualenv`
 3. Clone this repository: `git clone https://github.com/jmerizia/tensorflow-demo`
