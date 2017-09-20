@@ -52,6 +52,11 @@ def get_data():
     g = open("number.png", "wb")
     g.write(decoded_img_data)
     g.close()
+
+    ##################### ||
+    ## Your Code BELOW ## ||
+    ##################### \/
+
     image = Image.open("number.png")
     image = ImageEnhance.Color(image).enhance(0.0)
     image = ImageEnhance.Brightness(image).enhance(2)
@@ -60,16 +65,11 @@ def get_data():
 
     image_array = 0.992 - (np.array(image)[:, :, 0] / 255.0)
 
-    ##################### ||
-    ## Your Code BELOW ## ||
-    ##################### \/
-
     prediction = tf.argmax(y, 1)
 
     flat_image_array = image_array.flatten()
-    flat_array = flat_array[np.newaxis, ...]
+    flat_image_array = flat_image_array[np.newaxis, ...]
     guess = prediction.eval({x: flat_image_array})[0]
-
 
     #plt.imshow(flat_image_array.reshape((28, -1)))
 
