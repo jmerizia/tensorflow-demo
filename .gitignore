@@ -6,5 +6,7 @@ pip-selfcheck.json
 MNIST_data
 model
 share
+server_reference.py
+train_reference.py
 *.pyc
 *.png

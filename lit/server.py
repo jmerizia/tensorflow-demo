@@ -98,7 +98,7 @@ def get_data():
 
 @app.route('/')
 def root():
-    return send_file('www/index.html')
+    return send_file('../www/index.html')
 
 if __name__ == '__main__':
     app.run()

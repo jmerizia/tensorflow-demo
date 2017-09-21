@@ -2,41 +2,28 @@ import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
 mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 
-x = tf.placeholder(tf.float32, [None, 784])
+# Set x placeholder
 
-W = tf.Variable(tf.zeros([784, 10]))
-b = tf.Variable(tf.zeros([10]))
+# Set neural net variables
 
-y = tf.nn.softmax(tf.matmul(x, W) + b)
+# THE COOLEST PART: THE MODEL
 
-y_ = tf.placeholder(tf.float32, [None, 10])
+# Set up a placeholder for the actual y, y_
 
-cross_entropy = tf.reduce_mean(
-    -tf.reduce_sum(y_ * tf.log(y),
-    reduction_indices=[1])
-)
+# Set up the cost function
 
-train_step = tf.train.GradientDescentOptimizer(0.1).minimize(cross_entropy)
+# Set up the training algorithm
 
-sess = tf.InteractiveSession()
+# Create a session
 
-tf.global_variables_initializer().run()
+# Initialize all variables
 
-for i in range(10000):
-    if (i % 1000 == 0):
-        print("Iteration:", i)
-    batch_xs, batch_ys = mnist.train.next_batch(100)
-    sess.run(train_step, feed_dict={x: batch_xs, y_: batch_ys})
+# Train the model parameters
 
-correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(y_, 1))
+# Lazy loader for correct predictions
 
-accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
+# Calculate the accuracy of the model
 
-print(sess.run(accuracy, feed_dict={
-    x: mnist.test.images,
-    y_: mnist.test.labels
-    }))
+# Print results
 
-saver = tf.train.Saver()
-saver.save(sess, "./model/model.ckpt")
-print("Model saved!")
+# Save model to folder
