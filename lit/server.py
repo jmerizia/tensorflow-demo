@@ -58,7 +58,7 @@ y_conv = tf.matmul(h_fc1_drop, W_fc2) + b_fc2
 sess = tf.InteractiveSession()
 
 saver = tf.train.Saver()
-saver.restore(sess, "./model/model.ckpt")
+saver.restore(sess, "./conv_model/model.ckpt")
 
 @app.route('/estimate', methods=['POST'])
 def get_data():

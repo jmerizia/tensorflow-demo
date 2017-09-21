@@ -90,5 +90,5 @@ with tf.Session() as sess:
         }))
 
     saver = tf.train.Saver()
-    saver.save(sess, "./model/model.ckpt")
+    saver.save(sess, "./conv_model/model.ckpt")
     print("Model saved!")
