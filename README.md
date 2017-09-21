@@ -1,6 +1,6 @@
 # Tensorflow Demo
 
-Slides: [put link to slides here]
+Slides: https://docs.google.com/a/vt.edu/presentation/d/1zMitTe8ar2rC6UbM9JFrlIPV476rJob1ipTkCgc4Y4o/edit?usp=sharing
 
 ## Setup
 
