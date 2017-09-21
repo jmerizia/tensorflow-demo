@@ -13,8 +13,11 @@ Slides: [put link to slides here]
 4. Clone this repository: `git clone https://github.com/jmerizia/tensorflow-demo`
 5. `cd tensorflow-demo`
 6. Install necessary libraries:
-- 1
-- 2
+- `pip3 install --upgrade tensorflow`
+- `pip3 install --upgrade flask`
+- `pip3 install --upgrade matplotlib`
+- `pip3 install --upgrade scikit-image`
+- `pip3 install --upgrade pandas`
 7. Download Sublime Text 3: https://download.sublimetext.com/Sublime%20Text%20Build%203143%20x64%20Setup.exe
 **NOTE: You can use another editor (just not Notepad)**
 8. Open `hello.py` with Sublime Text 3 (or another editor)
