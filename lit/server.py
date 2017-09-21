@@ -69,10 +69,6 @@ def get_data():
     g.write(decoded_img_data)
     g.close()
 
-    ##################### ||
-    ## Your Code BELOW ## ||
-    ##################### \/
-
     image = Image.open("number.png")
     image = ImageEnhance.Color(image).enhance(0.0)
     image = ImageEnhance.Brightness(image).enhance(2)
@@ -89,10 +85,6 @@ def get_data():
         x: flat_image_array,
         keep_prob: 0.5
         })[0]
-
-    ##################### /\
-    ## Your Code ABOVE ## ||
-    ##################### ||
 
     return jsonify({"guess": str(guess)})
 
