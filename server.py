@@ -71,9 +71,9 @@ def get_data():
     flat_image_array = flat_image_array[np.newaxis, ...]
     guess = prediction.eval({x: flat_image_array})[0]
 
-    #plt.imshow(flat_image_array.reshape((28, -1)))
+    plt.imshow(flat_image_array.reshape((28, -1)))
 
-    #plt.show()
+    plt.show()
 
     ##################### /\
     ## Your Code ABOVE ## ||
