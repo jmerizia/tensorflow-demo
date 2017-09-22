@@ -14,18 +14,26 @@ app = Flask(__name__)
 ##################### \/
 
 # Set x placeholder
+x = tf.placeholder(tf.float32, [None, 784])
 
 # Set neural net variables
+W = tf.Variable(tf.zeros([784, 10]))
+b = tf.Variable(tf.zeros([10]))
 
 # THE COOLEST PART
+y = tf.nn.softmax(tf.matmul(x, W) + b)
 
 # Question: What are the preceeding tensors filled with?
 
 # Create a session
+sess = tf.InteractiveSession()
 
 # Initialize all variables
+tf.global_variables_initializer().run()
 
 # Restore saved model from file
+saver = tf.train.Saver()
+saver.restore(sess, "./model/model.ckpt")
 
 ##################### /\
 ## Your Code ABOVE ## ||
@@ -45,27 +53,36 @@ def get_data():
     ##################### \/
 
     # Open the image
+    image = Image.open("number.png")
 
     # Make the image black and white
+    image = ImageEnhance.Color(image).enhance(0.0)
 
     # Increase the brightness of the image by 2
+    image = ImageEnhance.Brightness(image).enhance(2)
     
     # Increase the contrast of the image by 3
+    image = ImageEnhance.Contrast(image).enhance(3)
     
     # Resize the image to 28 by 28
+    image = image.resize((28, 28))
 
     # Convert the image to an array and normalize it
+    image_array = 1 - (np.array(image)[:,:,0]/255.0)
 
     # Set up the model prediction
+    prediction = tf.argmax(y, 1)
 
     # Flatten the image
+    flat_image_array = image_array.flatten()
     
     # Question: Why is flattening the image important?
 
     # Add a dimension to the array
+    flat_image_array = flat_image_array[np.newaxis, ...]
 
     # Evaluate the prediction, passing in the values for x
-    guess = 42
+    guess = prediction.eval({x: flat_image_array})[0]
 
     #plt.imshow(flat_image_array.reshape((28, -1)))
 
